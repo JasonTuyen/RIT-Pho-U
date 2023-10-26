@@ -1,0 +1,30 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/style.css"/>
+</head>
+<body>
+    <h1>Delete Items</h1>
+    <form action="/delete" method="POST">
+        <table border = 1>
+            <thead>
+                <td>Product Name</td>
+                <td>Quantity On Hand</td>
+                <td>Unit Type</td>
+                <td>Quantity Needed</td>
+                <th>Delete?</th>
+            </thead>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td><input type="checkbox" name="delete[]" value="{{ row[0] }}"></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <input class="deleteButton" type="submit" value="Delete Selected Items">
+    </form>
+    <button onclick="location.href='/inventory'">Back to Inventory</button>
+</body>
+</html>

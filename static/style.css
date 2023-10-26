@@ -1,0 +1,19 @@
+html{
+    margin:0 auto;
+    padding-top: 50px;
+    max-width: max-content;
+}
+
+.buttons{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.buttons button{
+    margin: 1em;
+}
+
+.deleteButton{
+    margin-top: 8px;
+}

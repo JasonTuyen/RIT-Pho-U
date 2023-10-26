@@ -1,0 +1,16 @@
+<html>
+ <head>
+  <link rel="stylesheet" type="text/css" href="../static/style.css"/>
+ </head>
+ <body>
+    <h1>Add Item</h1>
+    <form method="post" action="/add">
+        <td><input type="text" name="product" placeholder="Product Name"></td>
+        <td><input type="text" name="amount" placeholder="Quantity On Hand"></td>
+        <td><input type="text" name="unit" placeholder="Unit Type"></td>
+        <td><input type="text" name="restock" placeholder="Quantity Needed"></td>
+        <td><button type="submit">Add Item</button></td>
+     </form>
+     <button onclick="location.href='/inventory'">Back to Inventory</button>
+ </body>
+</html>
