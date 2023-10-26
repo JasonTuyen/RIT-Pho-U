@@ -3,8 +3,8 @@ A Restaurant Inventory Tracker for my local pho restaurant.
 
 ## Built With
 * Python
-* [SQLite](https://www.sqlite.org/docs.html)
-* [Flask](https://flask.palletsprojects.com/en/3.0.x/)
+* SQLite
+* Flask
 
 ## Demo
 Coming Soon.
@@ -16,4 +16,4 @@ Disclaimer: This is a freelance project that I did with a local pho restaurant, 
 1. Open up your choice of terminal.
 1. Change to directory where files are located. 
 1. Run program by typing "Flask Run"
-
+1. All done, webapp will open on localhost for you to interact with. 
