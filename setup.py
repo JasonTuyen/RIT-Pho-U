@@ -1,5 +1,6 @@
 import sqlite3
 import uuid
+from datetime import datetime
 
 con = sqlite3.connect("database.db")
 cur = con.cursor()
@@ -27,5 +28,14 @@ unit = 'Boxes'
 restock = 5
 cur.execute("INSERT INTO inventory VALUES(?, ?, ?, ?, ?)", (id, product, amount, unit, restock))
 
+con.commit()
+cur.close()
+
+con = sqlite3.connect("timestamp.db")
+cur = con.cursor()
+cur.execute("DROP TABLE IF EXISTS checked")
+cur.execute('CREATE TABLE IF NOT EXISTS checked (time TEXT)')
+timestamp = datetime.now().strftime('%A, %m-%d-%Y %H:%M')
+cur.execute('INSERT INTO checked (time) VALUES (?)', (timestamp,))
 con.commit()
 cur.close()
